@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relic 6 Planets</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .image-link {
+      width: 32%;
+      text-align: center;
+    }
+
+    .image-link img {
+      width: 140%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 8px;
+    }
+
+    .image-link a {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
+    }
+
+    #backToTop:hover {
+      background-color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navMenu">
+        <a href="relic5.html">Relic 5 Planets</a>
+        <a href="relic6.html">Relic 6 Planets</a>
+        <a href="relic7.html">Relic 7 Planets</a>
+        <a href="relic8.html">Relic 8 Planets</a>
+        <a href="relic9.html">Relic 9 Planets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Relic 6 Planets</h1>
+    <div class="image-row">
+      <div class="image-link">
+        <img src="geonosis.png" alt="Geonosis">
+        <a href="geonosis.html">Geonosis</a>
+      </div>
+      <div class="image-link">
+        <img src="felucia.png" alt="Felucia">
+        <a href="felucia.html">Felucia</a>
+      </div>
+      <div class="image-link">
+        <img src="bracca.png" alt="Bracca">
+        <a href="bracca.html">Bracca</a>
+      </div>
+    </div>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

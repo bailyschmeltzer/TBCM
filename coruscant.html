@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coruscant Combat Mission</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--nav-bg);
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    img {
+      display: block;
+      max-width: 80vw;
+      margin: 0 auto 2rem;
+      border-radius: 8px;
+    }
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.3rem;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
+    }
+    #backToTop:hover {
+      background-color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navMenu">
+        <a href="relic5.html">Relic 5 Planets</a>
+        <a href="relic6.html">Relic 6 Planets</a>
+        <a href="relic7.html">Relic 7 Planets</a>
+        <a href="relic8.html">Relic 8 Planets</a>
+        <a href="relic9.html">Relic 9 Planets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <img src="coruscant.png" alt="Coruscant" />
+    <nav class="links-section">
+      <a href="#fleet">Coruscant Fleet CM</a>
+      <a href="#jedi">Coruscant Jedi CM</a>
+      <a href="#open">Coruscant Open CM</a>
+    </nav>
+
+    <section id="fleet">
+      <h2>Coruscant Fleet CM</h2>
+      <p>Enemies:<br>
+        Endurance, Clone Sgt Arc-170, BTL Ywing, Captain Rex's Arc-170<br>
+        Reinforcements: Clone Sgt Arc-170, BTL Ywing, Fives Umbaran Starfighter
+      </p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Profundity [95%]<br>
+        S: Outrider/MiLF/Rebel Y-Wing R: Cassian/Bistan/Ghost/Phantom II
+      </p>
+      <p>Auto<br>
+        Profundity [95%]<br>
+        S: Outrider/MiLF/Rebel Y-Wing R: Ghost/Phantom II<br>
+        Home One [90%]<br>
+        S: Outrider/MiLF/Rebel Y-Wing R: Cassian U-Wing/Bistan U-Wing
+      </p>
+    </section>
+
+    <section id="jedi">
+      <h2>Coruscant Jedi CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Clone Commander, Clone Trooper, Arc Trooper, Clone Trooper Medic, Clone Sharpshooter<br>
+        Wave 2: Lord Vader, Clone Commander, Clone Trooper, Arc Trooper, Clone Trooper Medic, Clone Sharpshooter
+      </p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Jedi Master Luke [95%]<br>
+        Jedi Knight Luke, Shaak-Ti, Grand Master Yoda, Revan [95%]<br>
+        Jedi Knight Revan, Shaak Ti, Hermit Yoda, Kyle Katarn [o] [100%]
+      </p>
+      <p>Auto<br>
+        Jedi Knight Cal Kestis [Lead Omicron] [95%]<br>
+        Kanan, Revan, Grand Master Yoda, Hermit Yoda
+      </p>
+    </section>
+
+    <section id="open">
+      <h2>Coruscant Open CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Clone Commander, Clone Trooper, Arc Trooper, Clone Trooper Medic, Clone Sharpshooter<br>
+        Wave 2: Clone Commander, Clone Trooper, Arc Trooper, Clone Trooper Medic, Clone Trooper Medic, Clone Sharpshooter
+      </p>
+      <p>Glossary</p>
+      <p>Auto<br>
+        Mon Mothma [Kyle Omicron] [95%]<br>
+        Kyle Katarn [o], Hotb Rebel Scout, Cara Dune, Pao
+      </p>
+      <p>Jedi Master Kenobi [90%]<br>
+        Commander Ahsoka, General Kenobi, Ahsoka Tano, Mace Windu<br>
+        Note: If you have Kit Fisto at r5 Mace Windu is used in that mission
+      </p>
+      <p>Padme [80%]<br>
+        Tech, Wrecker, Hunter, Echo [BB]
+      </p>
+      <p>Leia Organa [90%]<br>
+        Admiral Raddus, Jyn Erso, R2-D2, Drogan
+      </p>
+      <p>Queen Amidala [95%]<br>
+        Padawan Obi-Wan, Master Qui Gon Jinn, R2-D2, Ki Ad Mundi
+      </p>
+    </section>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
