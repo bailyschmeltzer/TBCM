@@ -110,11 +110,19 @@
       margin-bottom: 2rem;
     }
 
-    .image-row {
+    /* Container for top 3 images */
+    .top-row {
       display: flex;
       justify-content: space-between;
       gap: 2rem;
       flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    /* Container for the single bottom image */
+    .bottom-row {
+      display: flex;
+      justify-content: center;
     }
 
     .image-link {
@@ -177,7 +185,7 @@
 
   <main>
     <h1>Relic 7 Planets</h1>
-    <div class="image-row">
+    <div class="top-row">
       <div class="image-link">
         <img src="dathomir.png" alt="Dathomir">
         <a href="dathomir.html">Dathomir</a>
@@ -190,9 +198,12 @@
         <img src="kashyyyk.png" alt="Kashyyyk">
         <a href="kashyyyk.html">Kashyyyk</a>
       </div>
-      <div class="image-link">
+    </div>
+    <div class="bottom-row">
+      <div class="image-link" style="width: auto; max-width: 32%;">
         <img src="zeffo.png" alt="Zeffo">
         <a href="zeffo.html">Zeffo</a>
+      </div>
     </div>
   </main>
 
