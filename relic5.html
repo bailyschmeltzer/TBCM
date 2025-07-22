@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relic 5 Planets</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      padding: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.4;
+      margin-bottom: 3rem;
+    }
+
+    .planet-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .planet-card {
+      max-width: 420px; /* 40% larger than previous 300px */
+    }
+
+    .planet-card img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .planet-card a {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .planet-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="relic5.html">Relic 5 Planets</a>
+      <a href="relic6.html">Relic 6 Planets</a>
+      <a href="relic7.html">Relic 7 Planets</a>
+      <a href="relic8.html">Relic 8 Planets</a>
+      <a href="relic9.html">Relic 9 Planets</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Relic 5 Planet Missions</h1>
+    <div class="planet-grid">
+      <div class="planet-card">
+        <img src="mustafar.png" alt="Mustafar" />
+        <a href="mustafar.html">Mustafar</a>
+      </div>
+      <div class="planet-card">
+        <img src="corellia.png" alt="Corellia" />
+        <a href="corellia.html">Corellia</a>
+      </div>
+      <div class="planet-card">
+        <img src="coruscant.png" alt="Coruscant" />
+        <a href="coruscant.html">Coruscant</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustafar Combat Missions</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      padding: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mustafar-img {
+      display: block;
+      margin: 0 auto 2rem;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .section-nav {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-nav a {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .section-nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+      line-height: 1.6;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Floating back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
+    }
+
+    #backToTop:hover {
+      background-color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="relic5.html">Relic 5 Planets</a>
+      <a href="relic6.html">Relic 6 Planets</a>
+      <a href="relic7.html">Relic 7 Planets</a>
+      <a href="relic8.html">Relic 8 Planets</a>
+      <a href="relic9.html">Relic 9 Planets</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mustafar Combat Missions</h1>
+    <img src="mustafar.png" alt="Mustafar" class="mustafar-img" />
+
+    <div class="section-nav">
+      <a href="#fleet">Fleet</a>
+      <a href="#nute">Nute</a>
+      <a href="#wat">Wat</a>
+      <a href="#geos">Geos</a>
+      <a href="#lordvader">Lord Vader</a>
+    </div>
+
+    <section id="fleet">
+      <h2>Fleet Mission</h2>
+      <pre>
+Enemies:
+Malevolence, starting with Hyena Droid Bomber, Vulture Droid, and Sun Fac.
+Reinforcements can be Vulture Droid, Geonosian Spy, or Geonosian Soldier
+
+Auto Status: 50-60% using specific Leviathan with Mark VI in starting Lineup comps. Not recommended.
+
+Glossary
+Manual
+Executor [90%+]
+S: Hount Tooth/Xanadu/Razor Crest
+R: Slave1/IG-2000
+
+Auto
+Leviathan [60%]
+S: Mark VI/Scythe/B-28
+R: Fury/Tie-Adv/Tie-Dagger/Sith Fighter
+      </pre>
+    </section>
+
+    <section id="nute">
+      <h2>Nute Combat Mission</h2>
+      <pre>
+Enemies:
+Wave 1: B1 Commander, B2 stack, B1 stack, Magnaguard, Magnaguard, Droideka
+Wave 2: Nute Gunray, Magnaguard, Magnaguard, B2 stack, B1 Stack, B1 Commander
+
+Glossary
+Manual
+Grand Inquisitor [85%]
+Ninth Sister, Eighth Brother, Seventh Sister, Fifth Brother
+SEE + Sith Empire [100%]
+Darth Revan, Fallen Bastilla, Darth Malgus, Malak
+
+Auto
+Mother Talzin [90%]
+Zombie, Merrin, Ventress, Old Daka
+      </pre>
+    </section>
+
+    <section id="wat">
+      <h2>Wat Combat Mission</h2>
+      <pre>
+Enemies:
+Wave 1: B1 Commander, B2 stack, B1 stack, Magnaguard, Magnaguard, Droideka
+Wave 2: Wat Tambor, Magnaguard, Magnaguard, B2 stack, B1 stack, B1 Commander
+
+Glossary
+Manual
+Supreme Leader Kylo Ren [85%]
+Kylo Ren Unmasked, Hux, First Order Officer, Sith Trooper
+
+Auto
+Third Sister [90%]
+Grand Inquisitor, Seventh Sister, Fifth Brother, Eigth Brother
+Mother Talzin [90%]
+Nightsister Zombie, Merrin, Old Daka, Asajj Ventress
+Captain Enoch [90%]
+Scout Trooper, Death Trooper, Dark Trooper, Night Trooper
+      </pre>
+    </section>
+
+    <section id="geos">
+      <h2>Geonosian Combat Mission</h2>
+      <pre>
+Enemies:
+Wave 1: B1 Commander, B2 stack, B1 stack, Magnaguard, Magnaguard, Droideka
+Wave 2: Geonosian Brood Alpha, Geonosian Solder, Geonosian Spy, Poggle the Lesser, Sun Fac, Geonosian Brute
+
+Glossary
+Manual 
+Emperor Palpatine [90%]
+Mara Jade, Piett, Wat, Bane
+Supreme Leader Kylo Ren [90%]
+Hux, First Order Offier, Kylo Ren Unmasked,  Sith Trooper
+
+Auto
+Emperor Palpatine, Mara Jane, Piett, Wat, Bane
+      </pre>
+    </section>
+
+    <section id="lordvader">
+      <h2>Lord Vader Combat Mission</h2>
+      <pre>
+Enemies:
+Wave 1: Nute Gunray, Wat Tambor, Poggle the Lesser
+Wave 2: Jedi Master Kenobi
+      </pre>
+    </section>
+  </main>
+
+  <!-- Back to top button -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+</body>
+</html>
