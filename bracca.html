@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bracca Combat Mission</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--nav-bg);
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    img.cere-img {
+      display: block;
+      max-width: 50vw;
+      margin: 1rem auto 2rem;
+      border-radius: 8px;
+    }
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.3rem;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
+    }
+    #backToTop:hover {
+      background-color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navMenu">
+        <a href="relic5.html">Relic 5 Planets</a>
+        <a href="relic6.html">Relic 6 Planets</a>
+        <a href="relic7.html">Relic 7 Planets</a>
+        <a href="relic8.html">Relic 8 Planets</a>
+        <a href="relic9.html">Relic 9 Planets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="links-section">
+      <a href="#fleet">Bracca Fleet mission</a>
+      <a href="#leftcrosshair">Bracca Left/Crosshair CM</a>
+      <a href="#rightsecondsister">Bracca Right/Second Sister CM</a>
+      <a href="#jedi">Bracca Jedi CM</a>
+      <a href="#calcere">Bracca Cal/Cere SM</a>
+    </nav>
+
+    <section id="fleet">
+      <h2>Bracca Fleet mission</h2>
+      <p>Enemies:<br>
+        Chimera, Tie Advanced X1, Tie Fighter, Scythe<br>
+        Reinforcements: Tie Interceptor
+      </p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Profundity [95%]<br>
+        S: Millenium Falcon, Outrider, Y-Wing<br>
+        R: Bistan U-Wing, Cassian U-Wing, Phantom, Ghost
+      </p>
+    </section>
+
+    <section id="leftcrosshair">
+      <h2>Bracca Left/Crosshair CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Stormtrooper Commander, Purge Trooper [x2], Recon Stormtrooper, Stormtrooper<br>
+        Wave 2: Crosshair, Purgetrooper [x2], Stormtrooper Commander, Stormtrooper
+      </p>
+      <p>Note: An Imperial Probe Droid spawns as part of the planet modifier</p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Leia Organa [95%]<br>
+        R2-D2, Drogan, Commander Luke Skywalker, Captain Rex
+      </p>
+      <p>Auto<br>
+        Leia Organa [90%]<br>
+        R2-D2, Drogan, Commander Luke Skywalker, Captain Rex
+      </p>
+    </section>
+
+    <section id="rightsecondsister">
+      <h2>Bracca Right/Second Sister CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Stormtrooper Commander, Purge Trooper [x2], Recon Stormtrooper, Stormtrooper<br>
+        Wave 2: Second Sister, Purge Trooper [x3], Stormtrooper
+      </p>
+      <p>Note: An Imperial Probe Droid spawns as part of the planet modifier</p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Jedi Master Kenobi [90%]<br>
+        Commander Ahsoka Tano, General Kenobi, Ahsoka Tano, Padme Amidala
+      </p>
+      <p>Auto<br>
+        Jedi Master Kenobi [90%]<br>
+        Commander Ahsoka Tano, General Kenobi, Jedi Knight Anakin, Padme Amidala
+      </p>
+    </section>
+
+    <section id="jedi">
+      <h2>Bracca Jedi CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Stormtrooper Commander, Purge Trooper [x2], Recon Stormtrooper, Stormtrooper<br>
+        Wave 2: Ninth Sister, Purgetrooper [x3], Stormtrooper
+      </p>
+      <p>Note: An Imperial Probe Droid spawns as part of the planet modifier</p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Jedi Knight Luke [85%]<br>
+        Jedi Master Luke, General Anakin, Shaak-Ti, Revan
+      </p>
+      <p>Manual<br>
+        Jedi Master Luke [90%]<br>
+        Shaak Ti, Jedi Knight Luke, Grand Master Yoda, +1
+      </p>
+      <p>Auto<br>
+        Jedi Master Luke [85%]<br>
+        Jedi Knight Luke, Hermit Ezra, oKyle Katarn, General Anakin
+      </p>
+    </section>
+
+    <section id="calcere">
+      <h2>Bracca Cal/Cere SM</h2>
+      <p>Enemies:<br>
+        Wave 1: Purge Trooper [x2]<br>
+        Wave 2: Purge Trooper, Second Sister
+      </p>
+      <p>Notes:<br>
+        An Imperial Probe Droid spawns in the ally slot for the enemy team on enemy turns<br>
+        This battle is doable with both Baby Cal or Jedi Knight Cal, but is significantly easier with Jedi Knight Cal
+      </p>
+      <p>Glossary</p>
+      <p>Manual<br>
+        Cere [75%]<br>
+        Jedi Knight Cal Kestis<br>
+        Modding is important
+      </p>
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>JKCK needs at least +100 speed from mods. The faster he is, the easier the battle</li>
+        <li>NEVER use the event special with JKCK</li>
+        <li>JKCK Omicrons make the battle SIGNIFICANTLY easier</li>
+        <li>Use Windmill Defense as little as possible. This ability grants riposte which ignores protection. THIS IS WHAT CAUSES IPD EXPLOSIONS</li>
+      </ul>
+      <img src="cere.png" alt="Cere" class="cere-img" />
+    </section>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
