@@ -38,17 +38,25 @@
 
     header {
       background-color: var(--nav-bg);
-      padding: 1.5rem;
+      padding: 1rem 1.5rem;
+      position: relative;
     }
 
-    nav {
+    .nav-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
 
-    nav a {
+    .nav-links a {
       color: var(--nav-text);
       text-decoration: none;
       font-weight: bold;
@@ -56,8 +64,38 @@
       padding: 0.5rem 1rem;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
     }
 
     main {
@@ -117,7 +155,6 @@
       border-radius: 8px;
     }
 
-    /* Floating back to top button */
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -262,5 +299,11 @@ Wave 2: Jedi Master Kenobi
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
     ↑ Back to Top
   </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
