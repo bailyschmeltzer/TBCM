@@ -3,139 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeffo - Relic 7</title>
+  <title>Zeffo Combat Mission</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f5f5f5;
       margin: 0;
-      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 2rem;
+    header {
+      background-color: var(--nav-bg);
+      padding: 1rem 1.5rem;
+      position: relative;
     }
-    h2 {
-      margin-top: 2rem;
-      color: #60a5fa;
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    .section {
-      margin-bottom: 2rem;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
-    .glossary {
-      margin-top: 1rem;
-      padding-left: 1rem;
+    .nav-links a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
     }
-    .manual {
-      color: #facc15;
+    .nav-links a:hover {
+      text-decoration: underline;
     }
-    .auto {
-      color: #4ade80;
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
     }
-    ul {
-      margin: 0.5rem 0 1.5rem 1.5rem;
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
     }
-    li {
-      margin-bottom: 0.5rem;
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
     }
     img {
       display: block;
-      max-width: 100%;
-      margin: 2rem auto;
+      max-width: 80vw;
+      margin: 0 auto 2rem;
+      border-radius: 8px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.3rem;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
+    }
+    #backToTop:hover {
+      background-color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Zeffo (Relic 7)</h1>
+  <header>
+    <div class="nav-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navMenu">
+        <a href="relic5.html">Relic 5 Planets</a>
+        <a href="relic6.html">Relic 6 Planets</a>
+        <a href="relic7.html">Relic 7 Planets</a>
+        <a href="relic8.html">Relic 8 Planets</a>
+        <a href="relic9.html">Relic 9 Planets</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="section">
-    <h2>Zeffo Fleet Mission</h2>
-    <p><strong>Enemies:</strong><br />
-      Malevolence: Hyena Bomber, Vulture Droid [x2]<br />
-      Reinforcements: Hyena Bomber
-    </p>
-    <p><em>Note: The special Modifier for this mission can cause issues with special moves, please proceed with caution</em></p>
-  </div>
+  <main>
+    <img src="platoon.png" alt="Zeffo Platoon" />
 
-  <img src="platoon.png" alt="Platoon Chart" />
+    <section id="fleet">
+      <h2>Zeffo Fleet Mission</h2>
+      <p>Glossary:<br>
+        Auto/Manual indicators refer to recommended player strategy</p>
+      <p>Manual:<br>
+        Executor [60%]<br>
+        Razor Crest, Xanadu Blood, IG-2000<br>
+        R: Hound's Tooth, Slave I, Outrider
+      </p>
+    </section>
 
-  <div class="section">
-    <h2>Zeffo UFU CM</h2>
-    <p><strong>Enemies:</strong><br />
-      Wave 1: Stormtrooper Commander, Purge Trooper [2x], KX-Series Security Droid [2x]<br />
-      Wave 2: A Full Grown AT-ST!
-    </p>
-    <p><em>Note: An Imperial Probe Droid spawns as part of the planet modifier</em></p>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Rey [85%]<br />Commander Ahsoka Tano, Ben Solo, Jedi Training Rey, Cere Junda</li>
-        <li>Rey [85%]<br />Commander Ahsoka Tano, Cal Kestis, Jedi Training Rey, Cere Junda</li>
-      </ul>
-    </div>
-  </div>
+    <section id="missions">
+      <h2>Character Missions</h2>
+      <p>Enemies:<br>
+        Mix of ISB, Clone Force 99, Dark Troopers, Magma Troopers
+      </p>
+      <p>Manual:<br>
+        Jedi Master Luke [95%]<br>
+        Shaak Ti, Jedi Knight Cal, General Kenobi, Revan
+      </p>
+    </section>
 
-  <div class="section">
-    <h2>Zeffo JKCK CM</h2>
-    <p><strong>Enemies:</strong><br />
-      Wave 1: Purge Trooper, KX-Series Security Droid (x2), Stormtrooper (x2)<br />
-      Wave 2: Second Sister, Purge Trooper (x2)
-    </p>
-    <p><em>Note: An Imperial Probe Droid spawns as part of the planet modifier</em></p>
-    <div class="glossary manual">
-      <strong>Glossary (Manual)</strong>
-      <ul>
-        <li>Jedi Knight Cal Kestis<br />Jedi Knight Luke, Grand Master Yoda, Bastilla Shan, Shaak Ti [95%]</li>
-      </ul>
-    </div>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Jedi Knight Cal Kestis<br />Jedi Knight Luke - Jedi Master Luke, Shaak Ti, Grand Master Yoda [95%]</li>
-      </ul>
-    </div>
-  </div>
+    <section id="notes">
+      <h2>Notes</h2>
+      <p>Zeffo missions are some of the most challenging. High relics and modding are key to success.</p>
+    </section>
 
-  <div class="section">
-    <h2>Zeffo Open CM</h2>
-    <p><strong>Enemies:</strong><br />
-      Wave 1: Haxio Brood Droid Captain, Haxion Brood Bounty Droid [x2], Bounty Hunter [x3]<br />
-      Wave 2: Miktrull Tomb Guardian, Eilram Tomb Guardian [x2]
-    </p>
-    <div class="glossary manual">
-      <strong>Glossary (Manual)</strong>
-      <ul>
-        <li>Jedi Master Kenobi<br />Padme, General Anakin, General Kenobi, Commander Ahsoka Tano [95%]</li>
-      </ul>
-    </div>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Boss Nass [85%]<br />Jar Jar Binks, Gungan Boomadier, Gungan Phalanx, Captain Tarpals [omicron]</li>
-      </ul>
-    </div>
-  </div>
+    <section id="auto-manual">
+      <h2>Auto vs Manual</h2>
+      <p>Manual: Missions are complex and often require careful ability timing.</p>
+      <p>Auto: Not recommended unless team synergy and relic level are maxed.</p>
+    </section>
+  </main>
 
-  <div class="section">
-    <h2>Clone SM</h2>
-    <p><strong>Enemies:</strong><br />
-      Wave 1: Miktrull Tomb Guardian, Eilram Tomb Guardian [x2]<br />
-      Wave 2: Jedi General Chiata, Padawan Marseph
-    </p>
-    <div class="glossary manual">
-      <strong>Glossary (Manual)</strong>
-      <ul>
-        <li>CT-7567 Rex [80%]<br />Captain Rex, Echo, 5555s, Arc Trooper</li>
-      </ul>
-    </div>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Commander Cody [80%]<br />Captain Rex, Rex, Fives, Echo</li>
-      </ul>
-    </div>
-  </div>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
