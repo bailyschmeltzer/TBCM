@@ -1,112 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dathomir - Relic 7</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dathomir Combat Mission</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 2rem;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #e0e0e0;
+      --nav-text: #000000;
+      --button-bg: #dddddd;
+      --button-text: #000000;
     }
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 2rem;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --nav-bg: #1f1f1f;
+        --nav-text: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--nav-bg);
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--nav-text);
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    main {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    img {
+      display: block;
+      max-width: 80vw;
+      margin: 0 auto 2rem;
+      border-radius: 8px;
     }
     h2 {
+      font-size: 2rem;
       margin-top: 2rem;
-      color: #e94560;
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.3rem;
     }
-    .section {
-      margin-bottom: 2rem;
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.2s ease;
     }
-    .glossary {
-      margin-top: 1rem;
-      padding-left: 1rem;
-    }
-    .manual {
-      color: #facc15;
-    }
-    .auto {
-      color: #4ade80;
-    }
-    ul {
-      margin: 0.5rem 0 1.5rem 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
+    #backToTop:hover {
+      background-color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Dathomir (Relic 7)</h1>
+  <header>
+    <div class="nav-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links" id="navMenu">
+        <a href="relic5.html">Relic 5 Planets</a>
+        <a href="relic6.html">Relic 6 Planets</a>
+        <a href="relic7.html">Relic 7 Planets</a>
+        <a href="relic8.html">Relic 8 Planets</a>
+        <a href="relic9.html">Relic 9 Planets</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="section">
-    <h2>Dathomir Dr. Aphra CM</h2>
-    <p><strong>Enemies:</strong><br>
-      Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
-      Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie
-    </p>
-    <div class="glossary manual">
-      <strong>Glossary (Manual)</strong>
-      <ul>
-        <li>Doctor Aphra [90%]<br>Darth Vader, General Grievous, BT-1, 0-0-0</li>
-      </ul>
-    </div>
-  </div>
+  <main>
+    <img src="dathomir.png" alt="Dathomir" />
 
-  <div class="section">
-    <h2>Dathomir Open CM</h2>
-    <p><strong>Enemies:</strong><br>
-      Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
-      Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie.
-    </p>
-    <div class="glossary manual">
-      <strong>Glossary (Manual)</strong>
-      <ul>
-        <li>Admiral Trench [90%]<br>Count Dooku, Wat, Jango Fett, Nute Gunray</li>
-      </ul>
-    </div>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Third Sister [80%]<br>Fifth Brother, Grand Inquisitor, Eighth Brother, Seventh Sister</li>
-        <li>Supreme Leader Kylo Ren [85%]<br>Darth Rey, Sith Trooper, General Hux, Kylo Ren Unmasked</li>
-        <li>Supreme Leader Kylo Ren - No Hux [85%]<br>Darth Rey, Sith Trooper, Kylo Ren, Kylo Ren Unmasked</li>
-      </ul>
-    </div>
-  </div>
+    <section>
+      <h2>Dathomir Dr. Aphra CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
+        Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie.</p>
+      <p>Glossary<br>
+        Manual<br>
+        Doctor Aphra [90%]<br>
+        Darth Vader, General Grievous, BT-1, 0-0-0</p>
+    </section>
 
-  <div class="section">
-    <h2>Dathomir Empire CM</h2>
-    <p><strong>Enemies:</strong><br>
-      Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
-      Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie.
-    </p>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Lord Vader [95%]<br>Ninth Sister, Darth Vader, Mara Jade, Grand Moff Tarkin</li>
-      </ul>
-    </div>
-  </div>
+    <section>
+      <h2>Dathomir Open CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
+        Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie.</p>
+      <p>Glossary<br>
+        Manual<br>
+        Admiral Trench [90%]<br>
+        Count Dooku, Wat, Jango Fett, Nute Gunray</p>
+      <p>Auto<br>
+        Third Sister [80%]<br>
+        Fifth Brother, Grand Inquisitor, Eighth Brother, Seventh Sister</p>
+      <p>Supreme Leader Kylo Ren [85%]<br>
+        Darth Rey, Sith Trooper, General Hux, Kylo Ren Unmasked</p>
+      <p>Supreme Leader Kylo Ren - No Hux [85%]<br>
+        Darth Rey, Sith Trooper, Kylo Ren, Kylo Ren Unmasked</p>
+    </section>
 
-  <div class="section">
-    <h2>Dathomir Merrin CM</h2>
-    <p><strong>Enemies:</strong><br>
-      Wave 1: Hondo, Jabba Enforcer [x2], Weequay Saboteur, Ig-88<br>
-      Wave 2: Maul, Dash Rendar, Qi'Ra, Cartel Spy, Cartel Bruiser</p>
-    <p><em>Note: Extremely high health modding is extremely important to this mission, which also makes Old Daka lead [almost] mandatory</em></p>
-    <div class="glossary auto">
-      <strong>Glossary (Auto)</strong>
-      <ul>
-        <li>Old Daka [85%]<br>Mother Talzin, Asajj Ventress, Merrin, Nightsister Zombie</li>
-      </ul>
-    </div>
-  </div>
+    <section>
+      <h2>Dathomir Empire CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
+        Wave 2: Mother Talzin, Old Daka, Nightsister Spirit, Nightsister Acolyte, Nightsister Zombie.</p>
+      <p>Glossary<br>
+        Auto<br>
+        Lord Vader [95%]<br>
+        Ninth Sister, Darth Vader, Mara Jade, Grand Moff Tarkin</p>
+    </section>
+
+    <section>
+      <h2>Dathomir Merrin CM</h2>
+      <p>Enemies:<br>
+        Wave 1: Hondo, Jabba Enforcer [x2], Weequay Saboteur, Ig-88<br>
+        Wave 2: Maul, Dash Rendar, Qi'Ra, Cartel Spy, Cartel Bruiser</p>
+      <p>Note: Extremely high health modding is extremely important to this mission, which also makes Old Daka lead [almost] Mandatory</p>
+      <p>Glossary<br>
+        Auto<br>
+        Old Daka [85]<br>
+        Mother Talzin, Asajj Ventress, Merrin, Nightsister Zombie</p>
+    </section>
+  </main>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Back to Top
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
