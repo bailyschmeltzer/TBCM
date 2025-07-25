@@ -96,6 +96,26 @@
       margin: 0 auto 2rem;
       border-radius: 8px;
     }
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
     h2 {
       font-size: 2rem;
       margin-top: 2rem;
@@ -137,42 +157,108 @@
   </header>
 
   <main>
-    <img src="zeffo.png" alt="Zeffo CMs" />
+    <img src="platoon.png" alt="Zeffo Platoon" />
+
+    <nav class="links-section">
+      <a href="#fleet">Zeffo Fleet Mission</a>
+      <a href="#ufu">Zeffo UFU CM</a>
+      <a href="#jkck">Zeffo JKCK CM</a>
+      <a href="#open">Zeffo Open CM</a>
+      <a href="#clone">Clone SM</a>
+    </nav>
 
     <section id="fleet">
-      <h2>Zeffo Fleet Mission</h2>
-      <p>Glossary:<br>
-        Auto/Manual indicators refer to recommended player strategy
+      <h2>Zeffo Fleet mission</h2>
+      <p><strong>Enemies:</strong><br>
+        Malevolence: Hyena Bomber, Vulture Droid [x2]<br>
+        <strong>Reinforcements:</strong> Hyena Bomber
       </p>
-      <p>Manual:<br>
-        Executor [60%]<br>
-        Razor Crest, Xanadu Blood, IG-2000<br>
-        R: Hound's Tooth, Slave I, Outrider
-      </p>
-      <p>Note: The special Modifier for this mission can cause issues with special moves, please proceed with caution</p>
-      <img src="platoon.png" alt="Zeffo Platoon" />
-    </section>
+      <p><em>Note: The special Modifier for this mission can cause issues with special moves, please proceed with caution</em></p>
 
-    <section id="missions">
-      <h2>Character Missions</h2>
-      <p>Enemies:<br>
-        Mix of ISB, Clone Force 99, Dark Troopers, Magma Troopers
+      <h3>Glossary</h3>
+      <p><strong>Manual</strong><br>
+        Negotiator [75%]<br>
+        S: Marauder, Anakin's ETA-2, BTL-B Y-Wing<br>
+        R: Ahsoka's Starfighter, Plo Koon's Jedi Starfighter, Umbaran Starfighter, Rex's Arc 170
       </p>
-      <p>Manual:<br>
-        Jedi Master Luke [95%]<br>
-        Shaak Ti, Jedi Knight Cal, General Kenobi, Revan
+      <p><strong>Auto</strong><br>
+        Negotiator [85%]<br>
+        S: Marauder, Anakin's ETA-2, BTL-B Y-Wing<br>
+        R: Ahsoka's Starfighter, Plo Koon's Jedi Starfighter, Umbaran Starfighter, Rex's Arc 170
       </p>
     </section>
 
-    <section id="notes">
-      <h2>Notes</h2>
-      <p>Zeffo missions are some of the most challenging. High relics and modding are key to success.</p>
+    <section id="ufu">
+      <h2>Zeffo UFU CM</h2>
+      <p><strong>Enemies:</strong><br>
+        Wave 1: Stormtrooper Commander, Purge Trooper [2x], KX-Series Security Droid [2x]<br>
+        Wave 2: A Full Grown AT-ST!
+      </p>
+      <p><em>Note: An Imperial Probe Droid spawns as part of the planet modifier</em></p>
+
+      <h3>Glossary</h3>
+      <p><strong>Auto</strong><br>
+        Rey [85%]<br>
+        Commander Ahsoka Tano, Ben Solo, Jedi Training Rey, Cere Junda
+      </p>
+      <p><strong>Rey [85%]</strong><br>
+        Commander Ahsoka Tano, Cal Kestis, Jedi Training Rey, Cere Junda
+      </p>
     </section>
 
-    <section id="auto-manual">
-      <h2>Auto vs Manual</h2>
-      <p>Manual: Missions are complex and often require careful ability timing.</p>
-      <p>Auto: Not recommended unless team synergy and relic level are maxed.</p>
+    <section id="jkck">
+      <h2>Zeffo JKCK CM</h2>
+      <p><strong>Enemies:</strong><br>
+        Wave 1: Purge Trooper, KX-Series Security Droid (x2), Stormtrooper (x2)<br>
+        Wave 2: Second Sister, Purge Trooper (x2)
+      </p>
+      <p><em>Note: An Imperial Probe Droid spawns as part of the planet modifier</em></p>
+
+      <h3>Glossary</h3>
+      <p><strong>Manual</strong><br>
+        Jedi Knight Cal Kestis<br>
+        Jedi Knight Luke, Grand Master Yoda, Bastilla Shan, Shaak Ti [95%]
+      </p>
+      <p><strong>Auto</strong><br>
+        Jedi Knight Cal Kestis<br>
+        Jedi Knight Luke - Jedi Master Luke, Shaak Ti, Grand Master Yoda [95%]
+      </p>
+    </section>
+
+    <section id="open">
+      <h2>Zeffo Open CM</h2>
+      <p><strong>Enemies:</strong><br>
+        Wave 1: Haxio Brood Droid Captain, Haxion Brood Bounty Droid [x2], Bounty Hunter [x3]<br>
+        Wave 2: Miktrull Tomb Guardian, Eilram Tomb Guardian [x2]
+      </p>
+
+      <h3>Glossary</h3>
+      <p><strong>Manual</strong><br>
+        Jedi Master Kenobi<br>
+        Padme, General Anakin, General Kenobi, Commander Ahsoka Tano [95%]
+      </p>
+      <p><strong>Auto</strong><br>
+        Boss Nass [85%]<br>
+        Jar Jar Binks, Gungan Boomadier, Gungan Phalanx, Captain Tarpals [omicron]
+      </p>
+    </section>
+
+    <section id="clone">
+      <h2>Clone SM</h2>
+      <p><strong>Enemies:</strong><br>
+        Wave 1: Miktruli Tomb Guardian, Eilram Tomb Guardian [x2]<br>
+        Wave 2: Jedi General Chiata, Padawan Marseph
+      </p>
+
+      <h3>Glossary</h3>
+      <p><strong>Manual</strong><br>
+        CT-7567 Rex [80%]<br>
+        Captain Rex, Echo, 5555s, Arc Trooper
+      </p>
+      <p><strong>Auto</strong><br>
+        Commander Cody [80%]<br>
+        Captain Rex, Rex, Fives, Echo
+      </p>
     </section>
   </main>
 

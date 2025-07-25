@@ -92,10 +92,27 @@
     }
     img {
       display: block;
-      max-width: 80vw;
+      max-width: 100%;
       margin: 0 auto 2rem;
       border-radius: 8px;
       cursor: pointer;
+    }
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
     }
     h2 {
       font-size: 2rem;
@@ -140,85 +157,91 @@
   <main>
     <img src="kashyyyk.png" alt="Kashyyyk Platoon" onclick="this.requestFullscreen()" />
 
-    <section id="fleet">
-      <h2>Kashyyyk Fleet Mission</h2>
-      <p><strong>Enemies:</strong><br>
+    <nav class="links-section">
+      <a href="#fleet">Kashyyyk Fleet Mission</a>
+      <a href="#mara-jade">Kashyyyk Mara Jade CM</a>
+      <a href="#imperial-officer">Kashyyyk Imperial Officer CM</a>
+      <a href="#wookie">Kashyyyk Wookie CM</a>
+      <a href="#saw">Kashyyyk Saw SM</a>
+    </nav>
+
+    <div class="container">
+      <h1>Kashyyyk - Relic 7</h1>
+
+      <section id="fleet">
+        <h2>Kashyyyk Fleet Mission</h2>
+        <p><strong>Enemies:</strong><br>
         Executrix: Scythe, Tie Fighter, Tie Advanced<br>
         <em>Note: 2 additional Tie Fighters spawn due to Scythe unique</em><br>
-        <strong>Reinforcements:</strong> Tie Interceptor
-      </p>
-      <h3>Glossary</h3>
-      <p><strong>Manual</strong><br>
+        <strong>Reinforcements:</strong> Tie Interceptor</p>
+
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
         Profundity<br>
         S: Millennium Falcon, Outrider, Rebel Y-Wing<br>
-        R: Bistan U-Wing, Cassian U-Wing, Phantom II
-      </p>
-    </section>
+        R: Bistan U-Wing, Cassian U-Wing, Phantom II</p>
+      </section>
 
-    <section id="mara-jade">
-      <h2>Kashyyyk Mara Jade CM</h2>
-      <p><strong>Enemies:</strong><br>
+      <section id="mara-jade">
+        <h2>Kashyyyk Mara Jade CM</h2>
+        <p><strong>Enemies:</strong><br>
         Wave 1: Stormtrooper Commander, Scout Trooper, Stormtrooper, Recon Stormtrooper<br>
-        Wave 2: Mara Jade, Purge Trooper [x2], Stormtrooper Commander, Stormtrooper, Recon Stormtrooper
-      </p>
-      <h3>Glossary</h3>
-      <p><strong>Manual</strong><br>
+        Wave 2: Mara Jade, Purge Trooper [x2], Stormtrooper Commander, Stormtrooper, Recon Stormtrooper</p>
+
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
         Leia Organa<br>
-        Scarif Rebel Pathfinder, Raddus, R2-D2, Drogan, R2-D2
-      </p>
-      <p><strong>Auto</strong><br>
+        Scarif Rebel Pathfinder, Raddus, R2-D2, Drogan, R2-D2</p>
+        <p><strong>Auto</strong><br>
         Leia Organa [95%]<br>
-        Kanan Jarrus, Captain Rex, Drogan, R2-D2
-      </p>
-      <p>Boss Nass [Tarpals Omicron] [95%]<br>
-        Jar Jar, Captain Tarpals [o], Boombadier, Phalanx
-      </p>
-    </section>
+        Kanan Jarrus, Captain Rex, Drogan, R2-D2</p>
+        <p>Boss Nass [Tarpals Omicron] [95%]<br>
+        Jar Jar, Captain Tarpals [o], Boombadier, Phalanx</p>
+      </section>
 
-    <section id="imperial-officer">
-      <h2>Kashyyyk Imperial Officer CM</h2>
-      <p><strong>Enemies:</strong><br>
+      <section id="imperial-officer">
+        <h2>Kashyyyk Imperial Officer CM</h2>
+        <p><strong>Enemies:</strong><br>
         Wave 1: Stormtrooper Commander, Scout Trooper, Stormtrooper, Recon Stormtrooper<br>
-        Wave 2: Imperial Officer, Stormtrooper Commander, Stormtrooper, Scout Trooper, Recon Stormtrooper, Tie Fighter Pilot
-      </p>
-      <h3>Glossary</h3>
-      <p><strong>Manual</strong><br>
+        Wave 2: Imperial Officer, Stormtrooper Commander, Stormtrooper, Scout Trooper, Recon Stormtrooper, Tie Fighter Pilot</p>
+
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
         Jedi Knight Luke [95%]<br>
-        Jedi Master Luke, Shaak Ti, General Kenobi, Grand Master Yoda
-      </p>
-      <p><strong>Auto</strong><br>
+        Jedi Master Luke, Shaak Ti, General Kenobi, Grand Master Yoda</p>
+        <p><strong>Auto</strong><br>
         Jedi Knight Cal Kestis [95%]<br>
-        Grand Master Yoda, Kyle Katarn [o], Jedi Knight Anakin, General Anakin
-      </p>
-    </section>
+        Grand Master Yoda, Kyle Katarn [o], Jedi Knight Anakin, General Anakin</p>
+      </section>
 
-    <section id="wookie">
-      <h2>Kashyyyk Wookie CM</h2>
-      <p><strong>Enemies:</strong><br>
+      <section id="wookie">
+        <h2>Kashyyyk Wookie CM</h2>
+        <p><strong>Enemies:</strong><br>
         Wave 1: Stormtrooper Commander, Scout Trooper, Recon Stormtrooper, Stormtrooper<br>
-        Wave 2: Ninth Sister, Purge Trooper [x2]
-      </p>
-      <p><strong>Note:</strong> An Imperial Probe Droid spawns as part of the planet modifier</p>
-      <h3>Glossary</h3>
-      <p><strong>Manual</strong><br>
-        Tarfful [85%]<br>
-        Chewbacca, Veteran Smuggler Chewbacca, Vandor Chewbacca, Threepio and Chewie
-      </p>
-    </section>
+        Wave 2: Ninth Sister, Purge Trooper [x2]</p>
 
-    <section id="saw">
-      <h2>Kashyyyk Saw SM</h2>
-      <p><strong>Enemies:</strong><br>
+        <p><strong>Note:</strong> An Imperial Probe Droid spawns as part of the planet modifier</p>
+
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
+        Tarfful [85%]<br>
+        Chewbacca, Veteran Smuggler Chewbacca, Vandor Chewbacca, Threepio and Chewie</p>
+      </section>
+
+      <section id="saw">
+        <h2>Kashyyyk Saw SM</h2>
+        <p><strong>Enemies:</strong><br>
         Wave 1: AT-ST Driver, Purge Trooper [x2], Imperial Officer, Stormtrooper<br>
-        Wave 2: Stormtrooper Commander, Stormtrooper, Imperial Officer, Purge Trooper, AT-ST Driver
-      </p>
-      <p><strong>Note:</strong> An Imperial Probe Droid spawns as part of the planet modifier</p>
-      <h3>Glossary</h3>
-      <p><strong>Manual</strong><br>
+        Wave 2: Stormtrooper Commander, Stormtrooper, Imperial Officer, Purge Trooper, AT-ST Driver</p>
+
+        <p><strong>Note:</strong> An Imperial Probe Droid spawns as part of the planet modifier</p>
+
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
         Saw [80%]<br>
-        Cara Dune, Cassian Andor, Jynn Erso, Baze
-      </p>
-    </section>
+        Cara Dune, Cassian Andor, Jynn Erso, Baze</p>
+      </section>
+    </div>
   </main>
 
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">

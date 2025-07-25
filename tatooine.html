@@ -97,6 +97,24 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    /* New styles for links section */
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
+    }
     h2 {
       font-size: 2rem;
       margin-top: 2rem;
@@ -140,86 +158,110 @@
   <main>
     <img src="tatooine.png" alt="Tatooine CMs" onclick="this.requestFullscreen()" />
 
-  <div class="container">
-    <h1>Tatooine - Relic 7</h1>
+    <!-- Added navigation links section -->
+    <nav class="links-section">
+      <a href="#fleet">Tatooine Fleet CM</a>
+      <a href="#open">Tatooine Open CM</a>
+      <a href="#fennec">Tatooine Fennec CM</a>
+      <a href="#jabba">Tatooine Jabba CM</a>
+      <a href="#reva">Reva SM</a>
+      <a href="#krayt">Tatooine Krayt/Mandalore SM</a>
+    </nav>
 
-    <h2>Tatooine Fleet CM</h2>
-    <p><strong>Enemies:</strong><br>
-    Chimera, Tie Advanced X1, Tie Fighter, Tie Bomber<br>
-    <strong>Reinforcements:</strong> Tie Interceptor</p>
+    <div class="container">
+      <h1>Tatooine - Relic 7</h1>
 
-    <h3>Glossary</h3>
-    <p><strong>Auto</strong><br>
-    <strong>Executor [95%]</strong><br>
-    S: Hounds Tooth, Razor Crest, Xanadu Blood<br>
-    R: Slave 1, Ig-2000</p>
+      <section id="fleet">
+        <h2>Tatooine Fleet CM</h2>
+        <p><strong>Enemies:</strong><br>
+        Chimera, Tie Advanced X1, Tie Fighter, Tie Bomber<br>
+        <strong>Reinforcements:</strong> Tie Interceptor</p>
 
-    <h2>Tatooine Open CM</h2>
-    <p><strong>Enemies:</strong><br>
-    Wave 1: Sand Trooper Commander, Sandtrooper Scout [x2], Sandtrooper [x2]<br>
-    Wave 2: Imperial Officer, Sand Trooper Commander, Sandtrooper Scout [x2], Sandtrooper [x2]</p>
+        <h3>Glossary</h3>
+        <p><strong>Auto</strong><br>
+        <strong>Executor [95%]</strong><br>
+        S: Hounds Tooth, Razor Crest, Xanadu Blood<br>
+        R: Slave 1, Ig-2000</p>
+      </section>
 
-    <h3>Glossary</h3>
-    <p><strong>Manual</strong><br>
-    Trench<br>
-    Jango Fett, Wat, Count Dooku, Nute Gunray</p>
-    <p><strong>Auto</strong><br>
-    Mother Talzin [100%]<br>
-    Old Daka, Asajj Ventress, Nightsister Zombie, Merrin</p>
-    <p>Hera [100%]<br>
-    Captain Rex, Kanan Jarrus, Chopper, Sabine</p>
-    <p>Cere [100%]<br>
-    Baby Cal/Kelleran Beq/Jedi Knight Cal Kestis/General Anakin</p>
+      <section id="open">
+        <h2>Tatooine Open CM</h2>
+        <p><strong>Enemies:</strong><br>
+        Wave 1: Sand Trooper Commander, Sandtrooper Scout [x2], Sandtrooper [x2]<br>
+        Wave 2: Imperial Officer, Sand Trooper Commander, Sandtrooper Scout [x2], Sandtrooper [x2]</p>
 
-    <h2>Tatooine Fennec CM</h2>
-    <p><strong>Enemies:</strong><br>
-    Wave 1: Tusken Elder, Tusken Brute, Tusken Chieftan, Tusken Raider [x2]<br>
-    Wave 2: Tusken Elder, Tusken Chieftan, Tusken Brute, Tusken Raider [x2]</p>
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
+        Trench<br>
+        Jango Fett, Wat, Count Dooku, Nute Gunray</p>
+        <p><strong>Auto</strong><br>
+        Mother Talzin [100%]<br>
+        Old Daka, Asajj Ventress, Nightsister Zombie, Merrin</p>
+        <p>Hera [100%]<br>
+        Captain Rex, Kanan Jarrus, Chopper, Sabine</p>
+        <p>Cere [100%]<br>
+        Baby Cal/Kelleran Beq/Jedi Knight Cal Kestis/General Anakin</p>
+      </section>
 
-    <h3>Glossary</h3>
-    <p><strong>Auto</strong><br>
-    Rey [100%]<br>
-    Fennec, + 3 LS [use Resistance for ease]</p>
+      <section id="fennec">
+        <h2>Tatooine Fennec CM</h2>
+        <p><strong>Enemies:</strong><br>
+        Wave 1: Tusken Elder, Tusken Brute, Tusken Chieftan, Tusken Raider [x2]<br>
+        Wave 2: Tusken Elder, Tusken Chieftan, Tusken Brute, Tusken Raider [x2]</p>
 
-    <h2>Tatooine Jabba CM</h2>
-    <p><strong>Enemies:</strong><br>
-    Wave 1: Pirate Leader, Pirate Enforcer, Pirate Saboteur, Pirate Bruiser, Pirate Spy<br>
-    Wave 2: Hondo, Pirate Enforcer, Pirate Saboteur, Pirate Bruiser, Pirate Spy</p>
+        <h3>Glossary</h3>
+        <p><strong>Auto</strong><br>
+        Rey [100%]<br>
+        Fennec, + 3 LS [use Resistance for ease]</p>
+      </section>
 
-    <p><strong>Note:</strong><br>
-    The Jabba CM on Tatooine is so beyond brain dead easy that Jabba can quite literally solo the event at relic 7 [with mediocre mods] without his ult, while on auto.<br><br>
-    Due to Jabba's middle special dispel, his GL Unique, and the planet modifier granting DOTS to all characters on the field, Jabba outlasts enemy teams, as they effectively kill themselves over time.<br><br>
-    Using Jabba's typical team [Skiff, Boussh, Krrsatan, +1] will speed up the battle, but any allies to fill slots will complete the mission.</p>
+      <section id="jabba">
+        <h2>Tatooine Jabba CM</h2>
+        <p><strong>Enemies:</strong><br>
+        Wave 1: Pirate Leader, Pirate Enforcer, Pirate Saboteur, Pirate Bruiser, Pirate Spy<br>
+        Wave 2: Hondo, Pirate Enforcer, Pirate Saboteur, Pirate Bruiser, Pirate Spy</p>
 
-    <h2>Reva SM</h2>
-    <p><strong>Enemies:</strong><br>
-    Wave 1: Chief Nebit, Jawa Scavenger, Jawa Engineer, Jawa, Datcha<br>
-    Wave 2: Jedi Master Kenobi</p>
+        <p><strong>Note:</strong><br>
+        The Jabba CM on Tatooine is so beyond brain dead easy that Jabba can quite literally solo the event at relic 7 [with mediocre mods] without his ult, while on auto.<br><br>
+        Due to Jabba's middle special dispel, his GL Unique, and the planet modifier granting DOTS to all characters on the field, Jabba outlasts enemy teams, as they effectively kill themselves over time.<br><br>
+        Using Jabba's typical team [Skiff, Boussh, Krrsatan, +1] will speed up the battle, but any allies to fill slots will complete the mission.</p>
+      </section>
 
-    <p><strong>Note:</strong> An additional Pirate will spawn if platoons are not completed.</p>
+      <section id="reva">
+        <h2>Reva SM</h2>
+        <img src="reva.jpg" alt="Tatooine CMs" onclick="this.requestFullscreen()" />
+        <p><strong>Enemies:</strong><br>
+        Wave 1: Chief Nebit, Jawa Scavenger, Jawa Engineer, Jawa, Datcha<br>
+        Wave 2: Jedi Master Kenobi</p>
 
-    <h3>Glossary</h3>
-    <p><strong>Manual</strong><br>
-    Grand Inquisitor [No Platoons]<br>
-    Ninth Sister, Second Sister, Seventh Sister, Fifth Brother</p>
-    <p>Ninth Sister, Second Sister, Fifth Brother, Eight Brother [90%]</p>
-    <p>Seventh Sister, Fifth Brother, Ninth Sister, Marrok [95%]</p>
+        <p><strong>Note:</strong> An additional Pirate will spawn if platoons are not completed. Modding and turn order is CRITICAL. Please read the modding and strategy in the graphic</p>
 
-    <h2>Tatooine Krayt/Mandalore SM</h2>
-    <p><strong>Enemies:</strong><br>
-    It’s a Damn Krayt Dragon</p>
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
+        Grand Inquisitor [No Platoons]<br>
+        Ninth Sister, Second Sister, Seventh Sister, Fifth Brother</p>
+        <p>Ninth Sister, Second Sister, Fifth Brother, Eight Brother [90%]</p>
+        <p>Seventh Sister, Fifth Brother, Ninth Sister, Marrok [95%]</p>
+      </section>
 
-    <h3>Glossary</h3>
-    <p><strong>Manual</strong><br>
-    Bo Katan [Mandalore]<br>
-    Ig-12/Grogu, Beskar Mando [90%]</p>
+      <section id="krayt">
+        <h2>Tatooine Krayt/Mandalore SM</h2>
+        <p><strong>Enemies:</strong><br>
+        It’s a Damn Krayt Dragon</p>
 
-    <p>Bo needs 70k+ health, 270+ speed, and as much offense as possible.<br>
-    BAM needs 240+ speed, then as much defense and health as possible. Defense sets with health primaries are GOAT.<br>
-    IG/Paz. Either can be used. Aim for 140k+ health, 65% armor, 270+ speed.</p>
+        <h3>Glossary</h3>
+        <p><strong>Manual</strong><br>
+        Bo Katan [Mandalore]<br>
+        Ig-12/Grogu, Beskar Mando [90%]</p>
 
-    <p>Start using Bo's 1st special, then the second. Start BAM using his first special. Second special should ONLY be used in critical situations.</p>
-  </div>
+        <p>Bo needs 70k+ health, 270+ speed, and as much offense as possible.<br>
+        BAM needs 240+ speed, then as much defense and health as possible. Defense sets with health primaries are GOAT.<br>
+        IG/Paz. Either can be used. Aim for 140k+ health, 65% armor, 270+ speed.</p>
+
+        <p>Start using Bo's 1st special, then the second. Start BAM using his first special. Second special should ONLY be used in critical situations.</p>
+      </section>
+    </div>
+  </main>
 
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
     ↑ Back to Top

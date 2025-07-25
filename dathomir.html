@@ -97,6 +97,24 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    /* Added styles for links section */
+    nav.links-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    nav.links-section a {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav.links-section a:hover {
+      text-decoration: underline;
+    }
     h2 {
       font-size: 2rem;
       margin-top: 2rem;
@@ -140,7 +158,15 @@
   <main>
     <img src="dathomir.png" alt="Dathomir Platoon" onclick="this.requestFullscreen()" />
 
-    <section>
+    <!-- Added links navigation section -->
+    <nav class="links-section">
+      <a href="#aphra">Dathomir Dr. Aphra CM</a>
+      <a href="#open">Dathomir Open CM</a>
+      <a href="#empire">Dathomir Empire CM</a>
+      <a href="#merrin">Dathomir Merrin CM</a>
+    </nav>
+
+    <section id="aphra">
       <h2>Dathomir Dr. Aphra CM</h2>
       <p><strong>Enemies:</strong><br>
       Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
@@ -151,7 +177,7 @@
       Darth Vader, General Grievous, BT-1, 0-0-0</p>
     </section>
 
-    <section>
+    <section id="open">
       <h2>Dathomir Open CM</h2>
       <p><strong>Enemies:</strong><br>
       Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
@@ -169,7 +195,7 @@
       Darth Rey, Sith Trooper, Kylo Ren, Kylo Ren Unmasked</p>
     </section>
 
-    <section>
+    <section id="empire">
       <h2>Dathomir Empire CM</h2>
       <p><strong>Enemies:</strong><br>
       Wave 1: Nightsister Acolyte [x2], Nightsister Initiate, Nightsister Spirit, Nightsister Zombie<br>
@@ -180,7 +206,7 @@
       Ninth Sister, Darth Vader, Mara Jade, Grand Moff Tarkin</p>
     </section>
 
-    <section>
+    <section id="merrin">
       <h2>Dathomir Merrin CM</h2>
       <p><strong>Enemies:</strong><br>
       Wave 1: Hondo, Jabba Enforcer [x2], Weequay Saboteur, Ig-88<br>
