@@ -40,6 +40,26 @@
         repeating-radial-gradient(circle at 50% 50%, #fff 0 1px, transparent 1px 100px);
       opacity: 0.25;
     }
+    body::after {
+      /* World Between Worlds glowing lines */
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        repeating-linear-gradient(120deg, rgba(0,255,255,0.18) 0 2px, transparent 2px 80px),
+        repeating-linear-gradient(60deg, rgba(255,255,255,0.10) 0 1.5px, transparent 1.5px 120px),
+        repeating-linear-gradient(90deg, rgba(0,153,255,0.13) 0 2px, transparent 2px 100px),
+        repeating-linear-gradient(30deg, rgba(255,255,255,0.08) 0 1.5px, transparent 1.5px 120px);
+      mix-blend-mode: lighten;
+      opacity: 0.45;
+      animation: wbw-lines 16s linear infinite alternate;
+    }
+    @keyframes wbw-lines {
+      0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+      100% { background-position: 120px 80px, 80px 120px, 100px 100px, 60px 60px; }
+    }
 
     header {
       background-color: var(--nav-bg);
