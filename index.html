@@ -21,14 +21,31 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
+      background:
+        radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
       color: var(--text-color);
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        repeating-radial-gradient(circle at 20% 30%, #fff 0 1px, transparent 1px 100px),
+        repeating-radial-gradient(circle at 80% 70%, #fff 0 1px, transparent 1px 100px),
+        repeating-radial-gradient(circle at 50% 50%, #fff 0 1px, transparent 1px 100px);
+      opacity: 0.25;
     }
 
     header {
       background-color: var(--nav-bg);
       padding: 1rem 1.5rem;
       position: relative;
+      z-index: 1;
     }
 
     .nav-container {
@@ -91,6 +108,8 @@
       padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
