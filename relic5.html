@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Relic 5 Planets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-color: #070707;
@@ -143,7 +144,7 @@
 
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: 4rem;
       margin-bottom: 2rem;
       font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
       color: #ffe81f;
@@ -151,62 +152,44 @@
       letter-spacing: 4px;
     }
 
-    .mustafar-img {
+    .image-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .image-link {
+      width: 30%;
+      text-align: center;
+    }
+
+    .image-link img {
+      width: 140%;
+      max-width: 100%;
+      height: auto;
       display: block;
-      margin: 0 auto 2rem;
-      width: 80%;
-      border-radius: 10px;
+      margin: auto;
+      border-radius: 8px;
       box-shadow: 0 0 24px #ffe81f, 0 0 8px #fff;
     }
 
-    .section-nav {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-nav a {
-      margin: 0 1rem;
-      font-size: 1.2rem;
-      font-weight: bold;
+    .image-link a {
+      display: block;
+      margin-top: 0.5rem;
       color: var(--text-color);
       text-decoration: none;
-      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
-      text-shadow: 0 0 8px #ffe81f, 0 0 2px #fff;
-      letter-spacing: 2px;
+      font-family: 'Share Tech Mono', 'Orbitron', Arial, sans-serif;
+      font-weight: bold;
+      font-size: 1.25rem;
+      text-shadow: 0 0 6px #ffe81f, 0 0 2px #fff;
+      letter-spacing: 1px;
       transition: color 0.2s;
     }
 
-    .section-nav a:hover {
+    .image-link a:hover {
       color: #00ffe7;
       text-shadow: 0 0 12px #00ffe7, 0 0 2px #fff;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      border-bottom: 2px solid var(--text-color);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
-      color: #ffe81f;
-      text-shadow: 0 0 12px #ffe81f, 0 0 2px #fff;
-      letter-spacing: 2px;
-    }
-
-    pre {
-      white-space: pre-wrap;
-      font-family: 'Share Tech Mono', 'Orbitron', Arial, sans-serif;
-      line-height: 1.6;
-      background-color: rgba(0, 0, 0, 0.15);
-      padding: 1rem;
-      border-radius: 8px;
-      color: #ffe81f;
-      font-size: 1.15rem;
-      text-shadow: 0 0 6px #ffe81f, 0 0 2px #fff;
-      letter-spacing: 1px;
     }
 
     #backToTop {
@@ -228,8 +211,7 @@
     }
 
     #backToTop:hover {
-      background-color: #ffe81f;
-      color: #070707;
+      background-color: #888;
     }
   </style>
 </head>
