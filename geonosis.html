@@ -6,12 +6,12 @@
   <title>Geonosis Combat Mission</title>
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #ffffff;
-      --nav-bg: #1f1f1f;
-      --nav-text: #ffffff;
-      --button-bg: #333333;
-      --button-text: #ffffff;
+      --bg-color: #070707;
+      --text-color: #ffe81f;
+      --nav-bg: #181818;
+      --nav-text: #ffe81f;
+      --button-bg: #222;
+      --button-text: #ffe81f;
     }
 
     html {
@@ -20,13 +20,14 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Share Tech Mono', 'Orbitron', Arial, sans-serif;
       background:
-        radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        radial-gradient(ellipse at bottom, #181818 0%, #070707 100%);
       color: var(--text-color);
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
+      letter-spacing: 1px;
     }
     body::before {
       content: "";
@@ -38,7 +39,7 @@
         repeating-radial-gradient(circle at 20% 30%, #fff 0 1px, transparent 1px 100px),
         repeating-radial-gradient(circle at 80% 70%, #fff 0 1px, transparent 1px 100px),
         repeating-radial-gradient(circle at 50% 50%, #fff 0 1px, transparent 1px 100px);
-      opacity: 0.25;
+      opacity: 0.18;
     }
     body::after {
       /* World Between Worlds glowing lines */
@@ -53,7 +54,7 @@
         repeating-linear-gradient(90deg, rgba(0,153,255,0.13) 0 2px, transparent 2px 100px),
         repeating-linear-gradient(30deg, rgba(255,255,255,0.08) 0 1.5px, transparent 1.5px 120px);
       mix-blend-mode: lighten;
-      opacity: 0.45;
+      opacity: 0.35;
       animation: wbw-lines 16s linear infinite alternate;
     }
     @keyframes wbw-lines {
@@ -65,7 +66,7 @@
       background-color: var(--nav-bg);
       padding: 1rem 1.5rem;
       position: relative;
-      z-index: 1002; /* Increased z-index */
+      z-index: 1002;
     }
 
     .nav-container {
@@ -75,25 +76,30 @@
       max-width: 1000px;
       margin: 0 auto;
       position: relative;
-      z-index: 1002; /* Ensure nav is above main */
+      z-index: 1002;
     }
 
     .nav-links {
       display: flex;
       gap: 2rem;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .nav-links a {
       color: var(--nav-text);
       text-decoration: none;
+      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
       font-weight: bold;
       font-size: 1.25rem;
       padding: 0.5rem 1rem;
+      text-shadow: 0 0 8px #ffe81f, 0 0 2px #fff;
+      letter-spacing: 2px;
+      transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      text-decoration: underline;
+      color: #00ffe7;
+      text-shadow: 0 0 12px #00ffe7, 0 0 2px #fff;
     }
 
     .hamburger {
@@ -115,7 +121,7 @@
         left: 0;
         width: 100%;
         padding: 1rem;
-        z-index: 1003; /* Even higher z-index */
+        z-index: 1003;
       }
 
       .nav-links.show {
@@ -134,51 +140,75 @@
       position: relative;
       z-index: 1;
     }
-    main {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    img {
-      display: block;
-      max-width: 80vw;
-      margin: 0 auto 2rem;
-      border-radius: 8px;
-    }
-    nav.links-section {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
+      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
+      color: #ffe81f;
+      text-shadow: 0 0 16px #ffe81f, 0 0 4px #fff;
+      letter-spacing: 4px;
     }
-    nav.links-section a {
+
+    .geonosis-img {
+      display: block;
+      margin: 0 auto 2rem;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 24px #ffe81f, 0 0 8px #fff;
+    }
+
+    .section-nav {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-nav a {
+      margin: 0 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      font-size: 1.25rem;
       color: var(--text-color);
       text-decoration: none;
-      cursor: pointer;
+      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
+      text-shadow: 0 0 8px #ffe81f, 0 0 2px #fff;
+      letter-spacing: 2px;
+      transition: color 0.2s;
     }
-    nav.links-section a:hover {
-      text-decoration: underline;
+
+    .section-nav a:hover {
+      color: #00ffe7;
+      text-shadow: 0 0 12px #00ffe7, 0 0 2px #fff;
     }
+
     section {
       margin-bottom: 3rem;
     }
+
     h2 {
       font-size: 2rem;
-      margin-top: 2rem;
       border-bottom: 2px solid var(--text-color);
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
+      color: #ffe81f;
+      text-shadow: 0 0 12px #ffe81f, 0 0 2px #fff;
+      letter-spacing: 2px;
     }
+
     pre {
       white-space: pre-wrap;
-      font-family: inherit;
+      font-family: 'Share Tech Mono', 'Orbitron', Arial, sans-serif;
       line-height: 1.6;
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: rgba(0, 0, 0, 0.15);
       padding: 1rem;
       border-radius: 8px;
+      color: #ffe81f;
+      font-size: 1.15rem;
+      text-shadow: 0 0 6px #ffe81f, 0 0 2px #fff;
+      letter-spacing: 1px;
     }
+
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -190,12 +220,16 @@
       font-size: 1rem;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 10px rgba(255,232,31,0.3);
       z-index: 1000;
       transition: background-color 0.2s ease;
+      font-family: 'Orbitron', 'Share Tech Mono', Arial, sans-serif;
+      text-shadow: 0 0 8px #ffe81f, 0 0 2px #fff;
     }
+
     #backToTop:hover {
-      background-color: #888;
+      background-color: #ffe81f;
+      color: #070707;
     }
   </style>
 </head>
